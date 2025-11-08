@@ -41,18 +41,44 @@ It integrates a **CNN encoder** (for visual understanding) with an **LSTM decode
 
 ---
 
-## ⚙️ Installation
+## 🧠 Technical Highlights
 
-### Option 1 – Local setup
-```bash
-git clone https://github.com/amirrezakhosravi-1999/image-caption-generator.git
-cd image-caption-generator
+* **Frameworks:** PyTorch, TorchText, TorchVision
+* **Architecture:** ResNet-50 encoder + multi-layer LSTM decoder
+* **Loss Function:** Cross-Entropy (ignoring `<pad>` tokens)
+* **Optimizer:** SGD with momentum and weight decay
+* **Training Stability:** Gradient clipping (`max_norm = 0.25`)
+* **Evaluation Metric:** BLEU-n (1–4) via `torcheval.metrics.BLEUScore`
+* **Visualization:** Matplotlib loss curves and qualitative caption examples
 
-# (Optional) create a virtual environment
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS / Linux
-source venv/bin/activate
+---
 
-pip install -r requirements.txt
+## 🔮 Future Work & Roadmap
+
+The next development goals are realistic extensions that build on the current implementation:
+
+### 🧩 1. Model Improvements
+
+* Replace the LSTM decoder with a **Transformer-based** text generator.
+* Add **attention mechanisms** for more context-aware captioning.
+* Explore **Vision Transformer (ViT)** or hybrid encoder–decoder architectures.
+
+### ⚙️ 2. Training Enhancements
+
+* Implement **beam search** for more fluent sentence generation.
+* Add **scheduled sampling** to reduce exposure bias.
+* Evaluate additional metrics (CIDEr, METEOR, ROUGE-L).
+
+### 🗄️ 3. Dataset Scaling
+
+* Extend experiments to **MS COCO** and **Flickr30k** datasets.
+* Support multilingual caption generation (e.g., English + Italian).
+
+### 🌐 4. Deployment Plans
+
+* Build a **FastAPI** or **Flask** backend for inference.
+* Add a **Streamlit / Gradio / React**-based frontend for interactive demos.
+* Host the model and UI on **Hugging Face Spaces** for public access.
+
+These upgrades will gradually turn this into a complete applied AI project — from training to online deployment.
+
