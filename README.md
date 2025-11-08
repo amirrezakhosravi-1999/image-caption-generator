@@ -80,5 +80,4 @@ The next development goals are realistic extensions that build on the current im
 * Add a **Streamlit / Gradio / React**-based frontend for interactive demos.
 * Host the model and UI on **Hugging Face Spaces** for public access.
 
-These upgrades will gradually turn this into a complete applied AI project — from training to online deployment.
-
+These improvements are scheduled for upcoming iterations to evolve the project into a deployable, production-grade AI system.
